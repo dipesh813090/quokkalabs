@@ -4,6 +4,6 @@ Node Js - apis
 
 Just Run The Node Code Run the following commands:
 
-npm install
-nodemon server.js
+run : "npm install" and after that run:  "nodemon server.js"
+
 remember: do not delete package.json file
