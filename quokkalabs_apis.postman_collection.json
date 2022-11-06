@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "452e4bc6-b4a9-47da-8d40-364bd2b86b1a",
+		"name": "quokkalabs_apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14700458"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"dipesh\",\r\n    \"email\":\"diesh1@gmail.com\",\r\n    \"password\":\"1234\",\r\n    \"mobile_number\":8130909693\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"signup"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "dipesh@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "dipesh",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"disabled": true
+						},
+						{
+							"key": "passwordConf",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"diesh1@gmail.com\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNjdiMjRiZjcyNGYyOWFlOTNjZTkxNCIsImlhdCI6MTY2Nzc0MDMzMiwiZXhwIjoxNjcwMzMyMzMyfQ.0BnF8q0PD_ggeNIytDGN4o-ANpJw4Pxj6R8JJDL7mC8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"demo page 2\",\r\n    \"description\":\"post description\",\r\n    \"image_path\":\"na\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/posts/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"posts",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Author Post List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNjdiMjRiZjcyNGYyOWFlOTNjZTkxNCIsImlhdCI6MTY2Nzc0MDMzMiwiZXhwIjoxNjcwMzMyMzMyfQ.0BnF8q0PD_ggeNIytDGN4o-ANpJw4Pxj6R8JJDL7mC8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/posts/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"posts",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logged In Users Fetch Data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNjdiMjRiZjcyNGYyOWFlOTNjZTkxNCIsImlhdCI6MTY2Nzc0MDMzMiwiZXhwIjoxNjcwMzMyMzMyfQ.0BnF8q0PD_ggeNIytDGN4o-ANpJw4Pxj6R8JJDL7mC8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/logged_users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"logged_users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Like",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNjdiMjUwZjcyNGYyOWFlOTNjZTkxNyIsImlhdCI6MTY2Nzc0OTM2MywiZXhwIjoxNjcwMzQxMzYzfQ.Notj1m7f3QKG5oPL3fQh-hqJWGuBX5YGv8CZq8oBIWs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/posts/like_post/6367b2c024227387ddf29891",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"posts",
+						"like_post",
+						"6367b2c024227387ddf29891"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
