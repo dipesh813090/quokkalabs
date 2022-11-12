@@ -21,6 +21,7 @@ app.use(express.json());
 app.get('/', (req,resp) =>{
     resp.send('welcome page');
 });
+
 app.use('/signup', require('./routes/signup'));
 app.use('/login', require('./routes/login'));
 app.use('/posts', require('./routes/posts'));
